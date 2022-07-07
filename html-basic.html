@@ -5,6 +5,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    h1, h2 {
+      color : rgb(0, 38, 255) ;
+      font-size : 30px;
+      border :3px solid rgb(192, 255, 222);
+    }
+    p, h3 {
+      color :yellowgreen;
+      font-size: 25px;
+    }
+    a {
+      color: rgb(5, 94, 11);
+    }
+  </style>
 </head>
 <body>
   <h1>lorem</h1>
@@ -24,11 +38,14 @@
   <hr>
   <marquee> paio </marquee>
   <p>这几种强调  <strong>有什么</strong>  <b>区别？</b>  <u>这个？</u>  <i>这个？</i></p>
-  &lt!--这段注释需要出现在页面里面-->
+  &lt;!--这段注释需要出现在页面里面-->
   <pre>
-    function a() {
-      return 8
-    }
+    <code>
+      function a() {
+        return 8
+     }
+  </code>
+
   </pre>
   <hr>
   <ul>
@@ -66,12 +83,19 @@
     <dd>豆豆</dd>
   </dl>
   <hr>
-  <form action="http://www.baidu.com" target="-blank" >
-    <h2>Google搜索</h2>
-    <input type="text" name="wd">
-    <input  type="submit" value="在新窗口打开搜索结果">
+
+  <h2>Google搜索</h2>
+  <form target="_blank" action="https://www.google.com.hk/search">
+    <input type="text" name="q">
+    <input hidden type="text" name="ie" value="UTF-8">
+    <input hidden type="text" name="sourceid" value="UTF">
+    <button type="submit">在新窗口打开搜索结果</button>
   </form>
+
+
   <hr>
+
+
   <form>
     <p>个人信息调查表</p>
     <dl>
@@ -80,6 +104,7 @@
         <label><input type="radio" name="gender" value="female">女</label>
       </dd>
     </dl>
+
     <dl>
       <dt>年龄</dt>
       <dd>
@@ -98,29 +123,35 @@
             <option value="2">6到12岁</option>
         </select>
       </dd>
+
       <dt>生日</dt>
       <dd>
         <input type="date" value="2021-11-04" name="birthday">
       </dd>
+
       <dt>生辰</dt>
       <dd>
         <input type="time" >
       </dd>
+
       <dt>照片</dt>
       <dd>
         <label><input type="file" name="上传照片" value="点我上传照片，我比文件上传按钮好看" hidden>点我上传照片，我比文件上传按钮好看</label>
       </dd>
+
       <dt>自我介绍</dt>
       <dd>
-        <textarea rows="9" cols="30">&lt/textarea></textarea>
+        <textarea rows="9" cols="30">&lt;/textarea></textarea>
       </dd>
     </dl>
+
+
     <fieldset disabled>
       <legend>这里全部禁用了</legend>
       <input><input><input><input>
     </fieldset>
-    <input type="submit" name="submit" value="提交">
-    <input type="reset" name="reset" value="重置">
+    <button>提交</button>
+    <button type="reset">重置</button>
   </form>
   <hr>
   <table border="1">
@@ -169,6 +200,6 @@
   <a href="http://mi.com" target="iframe">小米</a><br>
   <iframe name="iframe" src="https://nodejs.org/en/" frameborder="1"></iframe>
   <div id="aaa"></div>
-  &gt&gt&gt&gt&gt&gt&gt&gt&gt&gt&gt&lt&lt&lt&lt&lt&lt&lt&lt&lt&lt&lt&lt&lt&lt&lt&lt&lt&ltspan>
+  &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;span>
 </body>
 </html>
