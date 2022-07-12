@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+    }
+    main {
+      color:white;
+      background-color: black;
+    }
+    .a {
+      background-color: black;
+      width: 600px;
+      margin: auto;
+    }
+
+    .b>p:hover{
+      background-color: red;
+    }
+    .b {
+      width: 600px;
+      margin: auto;
+      text-align: center;
+    }
+    .b>p{
+      border: 3px solid;
+      height: 40px;
+      width: 180px;
+      background-color: pink;
+      margin-right:30px ;
+      margin-bottom:15px ;
+    }
+    .b>p:nth-child(n+5) {
+      margin-left:210px;
+    }
+    .b>p:nth-child(n+9) {
+      margin-left:420px;
+    }
+    .b p:nth-child(4n+5) {
+      margin-top: -245px;
+    }
+    .d{
+      width: 600px;
+      margin: auto;
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+    .d div {
+      border-bottom: 1px dotted;
+      margin-bottom: -1px;
+    }
+    .e{
+      background-color: violet;
+    }
+    .e p {
+      background-color: violet;
+      width: 600px;
+      margin: auto;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="a">   hello world 请调整浏览器窗口大小查看效果hello world 请调整浏览器窗口大小查看效果hello world 请调整浏览器窗口大小查看效果hello world 请调整浏览器窗口大小查看效果hello world 请调整浏览器窗口大小查看效果hello world 请调整浏览器窗口大小查看效果</div>
+  </main>
+  <section class="b">
+      <p>产品</p>
+      <p>产品</p>
+      <p>产品</p>
+      <p>产品</p>
+      <p>产品</p>
+      <p>产品</p>
+      <p>产品</p>
+      <p>产品</p>
+      <p>产品</p>
+      <p>产品</p>
+      <p>产品</p>
+      <p>产品</p>
+    </section>
+    <section class="d">
+      <div>link</div>
+      <div>link</div>
+      <div>link</div>
+      <div>link</div>
+      <div>link</div>
+    </section>
+    <div class="e">
+      <p>©版权所有本页<br>所有布局均使用块元素</p>
+    </div>
+</body>
+</html>
