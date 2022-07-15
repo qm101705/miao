@@ -63,6 +63,33 @@
       margin: auto;
       text-align: center;
     }
+    strong {
+      box-sizing: border-box;
+      display: inline-block;
+      border: 3px solid;
+      background-color: pink;
+      width: 180px;
+      height: 40px;
+      text-align: center;
+    }
+    aside {
+      margin: auto;
+      width: 600px;
+      margin-top: 15px;
+      box-sizing: border-box;
+      font-size: 0;
+    }
+    aside * {
+      font-size: 16px;
+      word-spacing: normal;
+    }
+    strong:hover {
+      background-color: red;
+      box-sizing: border-box;
+    }
+    aside :not(:first-child) {
+      margin-left: 30px;
+    }
   </style>
 </head>
 <body>
@@ -83,6 +110,27 @@
       <p>产品</p>
       <p>产品</p>
     </section>
+    <aside class="c">
+      <strong>产品</strong>
+      <strong>产品</strong>
+      <strong>产品</strong>
+    </aside>
+    <aside class="f">
+      <strong>产品</strong>
+      <strong>产品</strong>
+      <strong>产品</strong>
+    </aside>
+    <aside class="g">
+      <strong>产品</strong>
+      <strong>产品</strong>
+      <strong>产品</strong>
+    </aside>
+    <aside class="h">
+      <strong>产品</strong>
+      <strong>产品</strong>
+      <strong>产品</strong>
+    </aside>
+
     <section class="d">
       <div>link</div>
       <div>link</div>
