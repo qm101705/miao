@@ -4,173 +4,290 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>oald-layout-block</title>
   <style>
     html {
-      min-width: 1000px;
       height: 100%;
+      min-width:900px
     }
-    body {
-      margin:0;
-      height: 100%;
-    }
-    main {
-      height: 100vh;
-      border: 1px solid;
-      xfont-size: 0px;
-      ztext-align: justify;
-      overflow: hidden;
-      word-spacing: -5px;
-      box-sizing: border-box;
-    }
-    main * {
-      font-size: 16px;
-      word-spacing: normal;
-    }
-    span {
-      display: inline-block;
-      vertical-align: top;
-      box-sizing: border-box;
-    }
-    .a {
-      background-color: pink;
-      width: 200px;
-      height: 100vh;
-      border: 1px solid;
-    }
-    .b {
-      background-color: rgba(123, 123, 19, 0.224);
-      width: calc(100% - 600px);
-      height: 100vh;
-      border: 1px solid;
+    body{
+      margin: 0;
+      height:100%;
 
     }
-    .c {
-      background-color: pink;
+
+    aside {
       width: 200px;
-      height: 100vh;
+      height: 100%;
       border: 1px solid;
-      overflow: auto;
-      text-align: right;
-      line-height: 2;
-      font-size: 25px;
+      box-sizing: border-box;
     }
-    .d {
+    .a{
       background-color: pink;
-      width: 200px;
-      height: 100vh;
+      overflow: hidden;
+    }
+    .b{
+      background-color: pink;
+      margin-left: calc(100% - 400px);
+      margin-top:-100vh;
+    }
+    .c{
+      background-color: pink;
+      margin-left: calc(100% - 200px);
+      margin-top:-100vh;
+    }
+    section {
+      background-color: rgba(229, 232, 121, 0.854);
+      width: calc(100% - 600px);
+      height: 100%;
+      margin-left: 200px;
+      margin-top:-100vh;
       border: 1px solid;
-      overflow: auto;
-      text-align: right;
-      line-height: 2;
-      font-size: 25px;
+      box-sizing: border-box;
+      overflow: hidden;
     }
-    ul {
-      overflow: auto;
-      height:calc(100vh - 100px)
-    }
-    input {
-      height: 25px;
-      width: 150px;
-    }
-    button {
-      width: 20px;
-      height: 20px;
-    }
-    .f {
-      overflow: auto;
-      height:calc(100vh - 90px);
+    main {
+      overflow-y: auto;
+      height: calc(100% - 60px);
       border: 1px solid;
+      box-sizing: border-box;
+    }
+    .a ul {
+      overflow-y: auto;
+      height: calc(100% - 110px);
+      box-sizing: border-box;
+      list-style: none;
     }
     h1 {
       text-align: right;
-      font-size: 30px;
-      margin-right: 20px;
+      margin: 0 20px;
+      line-height: 2.5;
+      font-size: 25px;
     }
-    strong {
+    button{
+      height: 20px;
+      width: 25px;
+    }
+    input {
+      height: 25px;
+      width: 160px;
+    }
+    header {
+      text-align: left;
+      font-size: 20px;
       line-height: 3;
-      font-size: 30px;
-      margin-left: 20px;
+      border:1px solid;
+      box-sizing: border-box;
+    }
+    .b {
+      text-align: right;
+    }
+    .c{
+      text-align: right;
     }
   </style>
 </head>
 <body>
-  <main>
-    <span class="a">
-      <h1>oald</h1>
-      <input type="text">
-      <button></button>
-      <ul>
-        <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word1</a></li>
-        <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word2</a></li>
-        <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word3</a></li>
-        <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word4</a></li>
-        <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word5</a></li>
-        <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word6</a></li>
-        <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word7</a></li>
-        <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word8</a></li>
-        <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word9</a></li>
-        <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word10</a></li>
-        <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word11</a></li>
-        <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word12</a></li>
-        <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word13</a></li>
-        <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word14</a></li>
-        <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word15</a></li>
-        <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word16</a></li>
-        <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word17</a></li>
-        <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word18</a></li>
-        <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word19</a></li>
-        <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word20</a></li>
-        <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word21</a></li>
-        <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word22</a></li>
-        <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word23</a></li>
-        <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word24</a></li>
-        <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word25</a></li>
-        <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word26</a></li>
-        <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word27</a></li>
-        <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word28</a></li>
-        <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word29</a></li>
-        <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word30</a></li>
-        <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word31</a></li>
-        <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word32</a></li>
-        <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word33</a></li>
-        <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word34</a></li>
-        <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word35</a></li>
-        <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word36</a></li>
-        <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word37</a></li>
-        <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word38</a></li>
-        <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word39</a></li>
-        <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word40</a></li>
-        <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word41</a></li>
-        <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word42</a></li>
-        <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word43</a></li>
-        <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word44</a></li>
-        <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word45</a></li>
-        <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word46</a></li>
-        <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word47</a></li>
-        <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word48</a></li>
-        <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word49</a></li>
-        <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word50</a></li>
-        <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word51</a></li>
-        <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word52</a></li>
-        <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word53</a></li>
-        <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word54</a></li>
-        <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word55</a></li>
-        <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word56</a></li>
-        <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word57</a></li>
-        <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word58</a></li>
-        <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word59</a></li>
-        <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word60</a></li>
-      </ul>
-    </span>
-    <span class="b">
-      <strong>fantasy</strong>
-      <p class="f">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium assumenda impedit libero odio possimus in necessitatibus eos magni amet illum voluptatibus nisi, soluta, aut nam? Iusto veniam odit laborum quisquam distinctio deleniti tempore tenetur ea ipsa ipsum vel rem dolor ad nihil magni sequi maxime, aspernatur sunt quaerat placeat aliquam eos at? Sunt error, in sequi nemo, possimus quam eligendi itaque sint voluptatem ex mollitia dolorum quod exercitationem nam aut ipsa quasi nobis iusto sapiente animi voluptate ducimus odio! Distinctio exercitationem ad perspiciatis odio sed mollitia dignissimos dolorum cumque aut earum vero explicabo inventore nihil laborum enim as atque quaerat nobis unde facilis corrupti officia nulla! Nihil, ipsam beatae totam accusamus eaque, autem quod iusto repellendus praesentium veniam rerum debitis hic neque dolorum voluptatum exercitationem nemo saepe. Fugit doloremque, velit nihil atque eligendi est, provident nostrum, dignissimos numquam quasi beatae sequi. Possimus earum inventore, laboriosam ipsam esse dolorum excepturi explicabo ducimus deleniti consequuntur dolor minus commodi voluptatem vero aliquid officiis nisi quidem, molestiae repellat harum modi, dicta temporibus quas voluptate! Ex exercitationem sapiente ipsa dolorem accusamus quibusdam, nisi voluptatum possimus vel perspiciatis sunt consequatur, praesentium dolore, aliquid ipsum molestiae rem fugiat cumque. Quae inventore explicabo officia quos doloribus velit dignissimos? Nobis laudantium dignissimos ipsam quae. Laboriosam earum ea porro soluta animi quibusdam quam velit delectus saepe, quis ratione quos nisi temporibus architecto ducimus sit blanditiis quisquam ad cupiditate beatae culpa nihil. Sint maiores accusantium sapiente nihil cupiditate quas sed eius libero asperiores possimus ipsum quia voluptas ad, ipsa molestiae fuga. Placeat fuga nulla pariatur quasi provident vitae, quae eius fugit perferendis tempore accusantium dolor. Molestiae soluta voluptatibus voluptas commodi. Omnis ratione accusantium voluptatibus ut tempore accusamus at reprehenderit alias a, amet eligendi hic excepturi, facere quae unde. Fugit laborum amet architecto dicta soluta necessitatibus corporis nisi, quia, explicabo esse provident. Consequatur nobis assumenda delectus fugiat. Debitis eaque aut suscipit animi quod numquam dolorem et fugiat temporibus consectetur similique iure, obcaecati vero, dolore repellat praesentium adipisci amet. Officiis veniam fugit facilis necessitatibus. Tenetur fuga ipsa debitis perferendis nemo. Eligendi cum, officia deserunt expedita facilis aliquid minima? Quisquam, aliquam voluptates? Corporis quos aperiam esse harum, nemo vitae, similique ratione vero quasi nobis inventore saepe mollitia ipsa optio culpa consectetur sapiente laudantium officiis quis? Reiciendis, id sit. Cumque sint nulla autem magni quod modi laborum repudiandae deserunt asperiores molestias, veritatis ea illo natus quis rem expedita atque et quasi. Itaque eius rem aspernatur eaque architecto unde esse omnis officiis, deleniti est ipsum vitae similique. Voluptatem, a quisquam. Neque culpa nulla illum dignissimos, veniam ut laudantium voluptatem eum temporibus deleniti accusamus dolorum obcaecati eaque placeat fuga mollitia, animi ipsum consequatur, quidem nobis illo magnam. Exercitationem sapiente consequatur repudiandae voluptatibus laborum soluta eos ut deserunt dolore.
-      </p>
-    </span>
-    <span class="c">vocabulary</span>
-    <span class="d">history</span>
-  </main>
+  <aside class="a">
+    <h1>oald</h1>
+    <input type="text">
+    <button></button>
+    <ul>
+      <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word1</a></li>
+          <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word2</a></li>
+          <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word3</a></li>
+          <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word4</a></li>
+          <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word5</a></li>
+          <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word6</a></li>
+          <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word7</a></li>
+          <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word8</a></li>
+          <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word9</a></li>
+          <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word10</a></li>
+          <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word11</a></li>
+          <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word12</a></li>
+          <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word13</a></li>
+          <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word14</a></li>
+          <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word15</a></li>
+          <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word16</a></li>
+          <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word17</a></li>
+          <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word18</a></li>
+          <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word19</a></li>
+          <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word20</a></li>
+          <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word21</a></li>
+          <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word22</a></li>
+          <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word23</a></li>
+          <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word24</a></li>
+          <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word25</a></li>
+          <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word26</a></li>
+          <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word27</a></li>
+          <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word28</a></li>
+          <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word29</a></li>
+          <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word30</a></li>
+          <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word31</a></li>
+          <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word32</a></li>
+          <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word33</a></li>
+          <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word34</a></li>
+          <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word35</a></li>
+          <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word36</a></li>
+          <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word37</a></li>
+          <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word38</a></li>
+          <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word39</a></li>
+          <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word40</a></li>
+          <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word41</a></li>
+          <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word42</a></li>
+          <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word43</a></li>
+          <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word44</a></li>
+          <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word45</a></li>
+          <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word46</a></li>
+          <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word47</a></li>
+          <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word48</a></li>
+          <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word49</a></li>
+          <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word50</a></li>
+          <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word51</a></li>
+          <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word52</a></li>
+          <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word53</a></li>
+          <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word54</a></li>
+          <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word55</a></li>
+          <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word56</a></li>
+          <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word57</a></li>
+          <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word58</a></li>
+          <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word59</a></li>
+          <li><a href="https://daojun714298211.github.io/miao/oald-layout-block.html">word60</a></li>
+    </ul>
+  </aside>
+  <section>
+    <header>fantasy</header>
+    <main>
+      <p>Lorem,ipsurm.</p>
+          <ol>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+              numquam voluptatibus aspernatur nam quidem inventore, incidunt
+              temporibus odit voluptate suscipit nisi dolores labore doloribus
+              eum? Odio id error neque ullam?
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+              numquam voluptatibus aspernatur nam quidem inventore, incidunt
+              temporibus odit voluptate suscipit nisi dolores labore doloribus
+              eum? Odio id error neque ullam?
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+              numquam voluptatibus aspernatur nam quidem inventore, incidunt
+              temporibus odit voluptate suscipit nisi dolores labore doloribus
+              eum? Odio id error neque ullam?
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+              numquam voluptatibus aspernatur nam quidem inventore, incidunt
+              temporibus odit voluptate suscipit nisi dolores labore doloribus
+              eum? Odio id error neque ullam?
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+              numquam voluptatibus aspernatur nam quidem inventore, incidunt
+              temporibus odit voluptate suscipit nisi dolores labore doloribus
+              eum? Odio id error neque ullam?
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+              numquam voluptatibus aspernatur nam quidem inventore, incidunt
+              temporibus odit voluptate suscipit nisi dolores labore doloribus
+              eum? Odio id error neque ullam?
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+              numquam voluptatibus aspernatur nam quidem inventore, incidunt
+              temporibus odit voluptate suscipit nisi dolores labore doloribus
+              eum? Odio id error neque ullam?
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+              numquam voluptatibus aspernatur nam quidem inventore, incidunt
+              temporibus odit voluptate suscipit nisi dolores labore doloribus
+              eum? Odio id error neque ullam?
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+              numquam voluptatibus aspernatur nam quidem inventore, incidunt
+              temporibus odit voluptate suscipit nisi dolores labore doloribus
+              eum? Odio id error neque ullam?
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+              numquam voluptatibus aspernatur nam quidem inventore, incidunt
+              temporibus odit voluptate suscipit nisi dolores labore doloribus
+              eum? Odio id error neque ullam?
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+              numquam voluptatibus aspernatur nam quidem inventore, incidunt
+              temporibus odit voluptate suscipit nisi dolores labore doloribus
+              eum? Odio id error neque ullam?
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+              numquam voluptatibus aspernatur nam quidem inventore, incidunt
+              temporibus odit voluptate suscipit nisi dolores labore doloribus
+              eum? Odio id error neque ullam?
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+              numquam voluptatibus aspernatur nam quidem inventore, incidunt
+              temporibus odit voluptate suscipit nisi dolores labore doloribus
+              eum? Odio id error neque ullam?
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+              numquam voluptatibus aspernatur nam quidem inventore, incidunt
+              temporibus odit voluptate suscipit nisi dolores labore doloribus
+              eum? Odio id error neque ullam?
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+              numquam voluptatibus aspernatur nam quidem inventore, incidunt
+              temporibus odit voluptate suscipit nisi dolores labore doloribus
+              eum? Odio id error neque ullam?
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+              numquam voluptatibus aspernatur nam quidem inventore, incidunt
+              temporibus odit voluptate suscipit nisi dolores labore doloribus
+              eum? Odio id error neque ullam?
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+              numquam voluptatibus aspernatur nam quidem inventore, incidunt
+              temporibus odit voluptate suscipit nisi dolores labore doloribus
+              eum? Odio id error neque ullam?
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+              numquam voluptatibus aspernatur nam quidem inventore, incidunt
+              temporibus odit voluptate suscipit nisi dolores labore doloribus
+              eum? Odio id error neque ullam?
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+              numquam voluptatibus aspernatur nam quidem inventore, incidunt
+              temporibus odit voluptate suscipit nisi dolores labore doloribus
+              eum? Odio id error neque ullam?
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+              numquam voluptatibus aspernatur nam quidem inventore, incidunt
+              temporibus odit voluptate suscipit nisi dolores labore doloribus
+              eum? Odio id error neque ullam?
+            </li>
+          </ol>
+    </main>
+  </section>
+  <aside class="b">
+    <h2>Vocabulary</h2>
+  </aside>
+  <aside class="c">
+    <h2>History</h2>
+  </aside>
 </body>
 </html>
