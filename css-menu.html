@@ -6,213 +6,115 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    html {
-      height: 100%;
-    }
-    body {
-      height: 100%;
+    body{
       margin: 0;
     }
-    header {
-      height:20px;
-      background-color: rgba(0, 0, 0, 0.541);
-      position: relative;
-    }
-    section {
-      background-color: rgba(0, 0, 0, 0.792);
-      height: calc(100% - 20px);
-    }
-    .a .b {
-      display: none;
-      padding: 0;
-      margin:0;
-      list-style: none;
-      background-color: rgba(0, 0, 0, 0.715);
-      color: white;
-    }
-    .a {
-      position: relative;
-      display: inline-block;
-    }
-    .a:hover>.b {
-      display: block;
-      position: absolute;
-    }
-    .b>li:hover {
-      background-color: rgba(35, 35, 139, 0.619);
-    }
-    .c .d{
-      display: none;
-      padding: 0;
-      margin:0;
-      list-style: none;
-      background-color: rgba(0, 0, 0, 0.715);
-      left: 50px;
-      top: -0.1px;
-      color: white;
-    }
-    .c {
-      position: relative;
-    }
-    .c:hover>.d {
-      display: block;
-      position: absolute;
-    }
-    .d>li {
-      width: 150px;
-    }
-    .c,.d:hover {
-      background-color: rgba(35, 35, 139, 0.619);
-    }
-
-    .aa .bb {
-      display: none;
-      padding: 0;
-      margin:0;
-      list-style: none;
-      background-color: rgba(0, 0, 0, 0.715);
-      color: white;
-    }
-    .aa {
-      position: relative;
-      display: inline-block;
-    }
-    .aa:hover>.bb {
-      display: block;
-      position: absolute;
-      top:100%
-    }
-    .bb {
-      width: 50px;
-    }
-    .bb>li:hover {
-      background-color: rgba(35, 35, 139, 0.619);
-    }
-
-    .aaa .bbb {
-      display: none;
-      padding: 0;
-      margin: 0;
-      list-style: none;
-      background-color:rgba(0, 0, 0, 0.715) ;
-      color: white;
-    }
-    .aaa {
-      display: inline-block;
-      position: relative;
-    }
-    .aaa:hover>.bbb{
-      display: block;
-      position: absolute;
-      top:100%
-    }
-    .bbb{
-      width: 70px;
-    }
-    .bbb>li:hover {
-      background-color: rgba(35, 35, 139, 0.619);
-    }
-
-    .ab .ac{
-      display: none;
+   ul {
       list-style: none;
       padding: 0;
       margin: 0;
-      color: white;
-      background-color:rgba(0, 0, 0, 0.715) ;
+      color: rgb(177,177,177);
     }
-    .ab {
-      position: relative;
+    .menu {
+      background-color: rgb(69,70,70);
+    }
+    .menu>li {
       display: inline-block;
+      white-space: nowrap;
+      padding: 0.5em;
     }
-    .ab:hover>.ac {
-      display: block;
+    .menu li{
+      position: relative;
+    }
+    .menu ul {
       position: absolute;
-      top:100%
-    }
-    .ac>li:hover {
-      background-color: rgba(35, 35, 139, 0.619);
-    }
-    .ad:hover {
-      background-color: rgba(35, 35, 139, 0.619);
-    }
-    .ad {
-      width: 70px;
-    }
-    .ad .ae {
-      list-style: none;
-      margin: 0;
-      padding: 0;
+      background-color: rgb(69,70,70);
       display: none;
-      color: white;
-      background-color:rgba(0, 0, 0, 0.715) ;
-      left: 70px;
-      top: -1px;
-      width:50px
+      border-radius: 3px;
+      padding-top: .5em;
+      padding-bottom: .5em;
+      box-shadow: 0 0 5px #333;
     }
-    .ad {
-      display: inline-block;
-      position: relative;
-    }
-    .ad:hover>.ae {
-      position: absolute;
+    .menu li:hover>ul {
       display: block;
     }
-    .ae>li:hover {
-      background-color: rgba(35, 35, 139, 0.619);
+    .menu li ul li:hover {
+      background-color: rgb(47, 47, 190);
+    }
+    .menu ul ul {
+      left: 100%;
+      top: -.5em;
+    }
+    .menu li li>span {
+      position: absolute;
+      right: 10px;
+      top: 0;
+    }
+    .menu li li {
+      padding: 0 100px 0 10px;
     }
   </style>
 </head>
 <body>
-    <header>
-      <div class="a">
-        文件(F)
-        <ul class="b">
-          <li>新建文本文件</li>
-          <li>新建文件</li>
-          <li>保存</li>
-          <li>另存为</li>
-          <li>全部保存</li>
-          <div class="c">
-            共享
-            <ul class="d">
-              <li>Copy vscode.dve Link</li>
-            </ul>
-          </div>
-      </div>
-      <div class="aa">
-        编辑(E)
-        <ul class="bb">
-          <li>撤销</li>
-          <li>恢复</li>
-          <li>剪切</li>
-          <li>复制</li>
-          <li>黏贴</li>
+  <ul class="menu">
+    <li>
+      文件
+    <ul>
+      <li>新建</li>
+      <li>
+        打开
+        <span>Ctrl+O</span>
+        <ul>
+          <li>
+            打开最近文件
+            <span>Ctrl+O</span>
+          </li>
+          <li>
+            打开文件夹
+            <span>Ctrl+O</span>
+          </li>
+          <li>
+            打开文件
+            <span>Ctrl+O</span>
+          </li>
         </ul>
-      </div>
-      <div class="aaa">
-        选择(S)
-        <ul class="bbb">
-          <li>全选</li>
-          <li>扩大选区</li>
-          <li>缩小选区</li>
-        </ul>
-      </div>
-      <div class="ab">
-        查看(V)
-        <ul class="ac">
-          <li>命令面板</li>
-          <div class="ad">
-            外观
-            <ul class="ae">
-              <li>全屏</li>
-              <li>放大</li>
-              <li>缩小</li>
-            </ul>
-          </div>
-        </ul>
-      </div>
-    </header>
-    <section></section>
+      </li>
+      <li>保存</li>
+      <li>另存为</li>
+    </ul>
+    </li>
+    <li>
+      编辑
+      <ul>
+        <li>剪切</li>
+        <li>粘贴</li>
+        <li>复制</li>
+      </ul>
+    </li>
+    <li>
+      选择
+      <ul>
+        <li>全选</li>
+        <li>扩大选区</li>
+        <li>缩小选区</li>
+      </ul>
+    </li>
+    <li>
+      查看
+      <ul>
+        <li>命令面板</li>
+        <li>
+          外观
+          <ul>
+            <li>全屏</li>
+            <li>居中布局</li>
+            <li>放大</li>
+            <li>缩小</li>
+          </ul>
+        </li>
+        <li>自动换行</li>
+      </ul>
+    </li>
+  </ul>
 </body>
 </html>
