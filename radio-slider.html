@@ -28,6 +28,12 @@
       input:nth-child(4):checked ~ .imgs img:nth-child(4) {
         opacity: 1;
       }
+      input:nth-child(1):checked ~ .a label:nth-child(1),
+      input:nth-child(2):checked ~ .a label:nth-child(2),
+      input:nth-child(3):checked ~ .a label:nth-child(3),
+      input:nth-child(4):checked ~ .a label:nth-child(4) {
+      background-color: red;
+      }
       input {
         display:none
       }
@@ -54,10 +60,10 @@
 </head>
 <body>
   <section>
-    <input type="radio" name="radio1" id="r1-1">
-    <input type="radio" name="radio1" id="r1-2">
-    <input type="radio" name="radio1" id="r1-3">
-    <input type="radio" name="radio1" id="r1-4">
+    <input type="radio" name="radio1" id="r1-1" checked>
+    <input type="radio" name="radio1" id="r1-2" >
+    <input type="radio" name="radio1" id="r1-3" >
+    <input type="radio" name="radio1" id="r1-4" >
     <div class="imgs">
       <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fp2.itc.cn%2Fimages01%2F20210201%2F3c0691b228dd4768bdf7b408e978476b.jpeg&refer=http%3A%2F%2Fp2.itc.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1660900254&t=49f59188acb459190e8525cf8c3690a8" alt="">
     <img src="https://pics2.baidu.com/feed/08f790529822720e84eb46a762610740f31fabf2.jpeg?token=4531574565db3b02d205787df6a9ba66&s=0930E91711C2FAF90A5460EE0300C022z" alt="">
