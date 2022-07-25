@@ -14,18 +14,6 @@
  }
 
  .table-striped{
-   border-collapse:collapse;
-   width:100%;
-  text-align:left;
-  thead {
-    border-bottom:2px solid;
-  }
-  tr {
-    border-bottom:rgb(222,226,230) 1px solid;
-  }
-  th,td {
-    padding:.6em
-  }
   tbody tr:nth-child(odd){
     background-color:rgb(242,242,242);
    }
@@ -33,31 +21,13 @@
 
 
  .table-hover{
-   border-collapse:collapse;
-   width:100%;
-   text-align:left;
-   thead {
-    border-bottom:2px solid;
-  }
-  tr {
-    border-bottom:rgb(222,226,230) 1px solid;
-  }
   tbody tr:hover {
     background-color: rgb(236,236,236);
-  }
-  th,td {
-    padding:.6em
   }
   }
 
 
   .table-bordered {
-   border-collapse:collapse;
-   width:100%;
-   text-align:left;
-   thead {
-    border-bottom:2px solid;
-  }
   th,td {
     padding:.6em;
     border:rgb(222,226,230) 1px solid;
@@ -65,25 +35,14 @@
   }
 
 
-  .table-borderless {
-   border-collapse:collapse;
-   width:100%;
-   text-align:left;
-   th,td {
-    padding:.6em
-  }
+  .table-borderless tr{
+     border:hidden;
   }
 
 
   .table-dark {
-   border-collapse:collapse;
-   width:100%;
-   text-align:left;
-   background: black;
+    background-color: black;
     color:white;
-    thead {
-      border-bottom:2px solid ;
-    }
     tr {
       border-bottom:rgb(55,59,62) 1px solid;
     }
@@ -97,16 +56,7 @@
 
 
   .table-sm {
-  border-collapse:collapse;
-  width:100%;
-  text-align:left;
   th,td {
     padding:0;
-  }
-  thead {
-    border-bottom:2px solid;
-  }
-  tr {
-    border-bottom:rgb(222,226,230) 1px solid;
   }
  }
