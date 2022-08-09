@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style type="text/less">
+    .a {
+      width: 300px;
+      border:1px solid;
+      height:300px;
+      div{
+        width: 100px;
+        height:100px;
+        margin:auto;
+        margin-top:100px;
+        border:1px solid;
+      }
+    }
+    strong {
+      display: inline-block;
+      width: 300px;
+      border:1px solid;
+      height:300px;
+      text-align: center;
+      span {
+        display: inline-block;
+        width: 100px;
+        height:100px;
+        margin-top:100px;
+        border:1px solid;
+      }
+    }
+
+    header {
+      width: 300px;
+      border:1px solid;
+      height:300px;
+      position: relative;
+      div {
+        position:absolute;
+        width: 100px;
+        height:100px;
+        border:1px solid;
+        left:100px;
+        top:100px;
+      }
+    }
+
+    .b {
+      width: 300px;
+      border:1px solid;
+      height:300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      div {
+        width: 100px;
+        height:100px;
+        border:1px solid;
+      }
+    }
+
+   .c {
+      width: 300px;
+      border:1px solid;
+      height:300px;
+      display: table-cell;
+      vertical-align: middle;
+      p {
+        width: 100px;
+        height:100px;
+        border:1px solid;
+        margin-left:100px
+      }
+    }
+  </style>
+  <script src="less.js"></script>
+</head>
+<body>
+  <h1>1</h1>
+  <section class="a">
+    <div>
+    </div>
+  </section>
+  <br>
+  <h1>2</h1>
+  <strong>
+    <span></span>
+  </strong>
+  <h1>3</h1>
+  <br>
+   <header>
+    <div></div>
+   </header>
+   <br>
+   <h1>4</h1>
+   <section class="b">
+    <div></div>
+   </section>
+   <h1>5</h1>
+  <span class="c">
+    <p></p>
+  </span>
+</body>
+</html>

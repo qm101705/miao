@@ -1,0 +1,22 @@
+@font-face {
+  font-family: 我的字体;
+  src: url(mi-iconfont.ttf);
+}
+.icon{
+  font-family:我的字体;
+}
+.iconfont-shopping::before {
+  content: '\E60C';
+}
+.iconfont-more::before{
+  content:'\e621';
+}
+.iconfont-hot::before{
+  content:''
+}
+.iconfont-hot::after{
+  content:'\e615'
+}
+.icon-font-watch::after{
+  content:'\e60b'
+}
