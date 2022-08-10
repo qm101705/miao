@@ -20,7 +20,7 @@
   var b = Number(prompt(""))
   var c = Number(prompt(""))
   var m = (a+b)/c
-  console.log(m)
+  console.log(Math.floor(m))
 </script>
 
 <script type="x" id="ch0103/04">
@@ -46,48 +46,48 @@
 </script>
 
 <script type="x" id="ch0103/07">
+  var x = Number(prompt(""))
   var a = Number(prompt(""))
   var b = Number(prompt(""))
   var c = Number(prompt(""))
   var d = Number(prompt(""))
-  var x = Number(prompt(""))
   var f= x=>a*x**2+b*x**2+c*x+d
-  console.log(f(x))
+  console.log(f(x).toFixed(7))
 </script>
 
 <script type="x" id="ch0103/08">
   var F = Number(prompt('输入华氏温度'))
   var C = 5*(F-32)/9
-  console.log(C)
+  console.log(C.toFixed(5))
 </script>
 
 
 <script type="x" id="ch0103/09">
   var r = Number(prompt(""))
   var d = 2*r
-  var c = 3.1415926*d
-  var s = 3.14159265*r**2
-  console.log(d,c,s)
+  var c = 3.14159*d
+  var s = 3.14159*r**2
+  console.log(d.toFixed(4),c.toFixed(4),s.toFixed(4))
 </script>
 
 <script type="x" id="ch0103/10">
   var r1 = Number(prompt(""))
   var r2 = Number(prompt(""))
   var R = 1/(1/r1+1/r2)
-  console.log(R)
+  console.log(R.toFixed(2))
 </script>
 
 <script type="x" id="ch0103/11">
   var a = Number(prompt(""))
   var b = Number(prompt(""))
   var m = a%b
-  console.log(m)
+  console.log(m.toFixed(4))
 </script>
 
 <script type="x" id="ch0103/12">
   var r = Number(prompt(""))
-  var V = 4/3*3.1415926*r**3
-  console.log(V)
+  var V = 4/3*3.14*r**3
+  console.log(V.toFixed(2))
 </script>
 
 <script type="x" id="ch0103/13">
@@ -100,8 +100,8 @@
 </script>
 
 <script type="x" id="ch0103/14">
-  var r = Number(prompt(''))
   var h = Number(prompt(''))
+  var r = Number(prompt(''))
   var v = 3.14159*r*r*h/1000
   var t = 20/v
   console.log(Math.ceil(t))
@@ -111,8 +111,9 @@
    var n = Number(prompt(''))
    var x = Number(prompt(''))
    var y = Number(prompt(''))
-   var z = n/(y/x)
-   console.log(Math.floor(z))
+   var m = Math.ceil(y/x)
+   var z = n-m
+   console.log(z)
 </script>
 
 <script type="x" id="ch0103/16">
@@ -146,7 +147,7 @@
 </script>
 
 
-<script type="x" id="ch0103/19">
+<script type="" id="ch0103/19">
   var a = Number(prompt(""))
   var b = Number(prompt(""))
   var c=a*b
@@ -205,7 +206,7 @@
   console.log(n%3===0&&n%5===0?'YES':'NO')
 </script>
 
-<script type="" id="ch0104/09">
+<script type="x" id="ch0104/09">
   var n = Number(prompt())
   console.log(n%3==0&&n%5==0&&n%7==0?3+' '+5+' '+7:(n%3===0))
 </script>
