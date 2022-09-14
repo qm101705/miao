@@ -33,5 +33,13 @@ var qm101705 = {
     return array
   },
 
+  drop: function (array, n = 1) {
+    for (var i = 0; i < array.length; i++) {
+      if (i >= n) {
+        break
+      } else {
 
+      }
+    }
+  }
 }
