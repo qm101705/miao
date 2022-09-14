@@ -1,17 +1,18 @@
 var qm101705 = {
+
   chuck: function (array, size = 1) {
     var result = []
     for (var i = 0; i < array.length;) {
-      var res = []
+      var group = []
       for (var j = 0; j < size; j++) {
-        res.push(array[i])
+        group.push(array[i])
         i++
         if (i == array.length) {
           break
         }
       }
+      result.push(group)
     }
-    result.push(res)
     return result
   },
 
@@ -24,4 +25,13 @@ var qm101705 = {
     }
     return result
   },
+
+  fill: function (array, value, [start = 0], [end = array.length]) {
+    for (var i = start; i < end; i++) {
+      array[i] = value
+    }
+    return array
+  },
+
+
 }
