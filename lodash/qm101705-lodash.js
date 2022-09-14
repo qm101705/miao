@@ -1,20 +1,19 @@
 var qm101705 = {
 
-  chunk: function (array, size = 1) {
-    var result = []
-    for (var i = 0; i < array.length;) {
-      var group = []
-      for (var j = 0; j < size; j++) {
-        group.push(array[i])
-        i++
-        if (i == array.length) {
-          break
+  chunk: function (array, size) {
+    var re = []
+    var arr = []
+    for (var i = 0; i < array.length; i++) {
+        if (i % size == 0) {
+            re.push(arr)
+            var arr = []
         }
-      }
-      result.push(group)
+        arr.push(array[i])
     }
-    return result
-  },
+    re.push(arr)
+    re.shift()
+    return re
+},
 
   compact: function (array) {
     var result = []
