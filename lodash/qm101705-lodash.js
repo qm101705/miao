@@ -43,7 +43,6 @@ var qm101705 = {
   },
 
   findIndex: function (array, predicate, fromIndex = 0) {
-    predicate = short(predicate)
     for (var i = fromIndex; i < array.length; i++) {
       if (predicate(array[i])) {
         return i
