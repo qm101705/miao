@@ -77,49 +77,44 @@
 
   //一个实点一个空点的虚线
   var x = 0
-  for (var i = 0; i < 10000 ; i++) {
+  for (var i = 0; i < 100 ; i++) {
     dot(x = x + 2, 20 , 'blue')
   }
 
   // 画一条两个实点两个空点的虚线
-  var x = 0
-  for (var i = 0; i < 10000 ; i++) {
-    dot(x = x + 3, 25 , 'blue')
-    dot(x = x + 1, 25 , 'blue')
+
+  for (var x = 0; x < 200 ; x += 3) {
+      dot(x, 25 , 'blue')
+
+    dot(x + 1, 25 , 'blue')
 
   }
-
   //画一条三个实点两个空点的虚线
-  var x = 0
-  for (var i = 0; i < 10000 ; i++) {
-    dot(x = x + 1, 40 , 'blue')
-    dot(x = x + 1, 40 , 'blue')
-    dot(x = x + 1, 40 , 'blue')
-    dot(x = x + 2, 40 , 'white')
 
+  for (var x = 0; x < 200 ; x++) {
+    if (x % 5 < 3) {
+      dot(x, 70 , 'blue')
+    }
   }
 
   //画一条45度的斜线
-  var x = 0
-  var y = 0
-  for (var i = 0; i < 10000 ; i++) {
-    dot(x++,y++,'red')
+  for (var x = 0,  y = 0; x < 10000 ; x++, y++) {
+    dot(x, y, 'red')
   }
 
 
 
   //画一条30度的斜线
-  var x = 0
-  for (var i = 0; i < 10000 ; i++) {
+
+  for (var x = 0; x < 10000 ; x++) {
     var y = 0.6 * x
-    dot(x++, y++ , 'pink')
+    dot(x, y , 'pink')
   }
 
   // 画一条跨越画布左上角和右下角的对角线
-  var x = 0
-  for (var i = 0; i < 10000 ; i++) {
+  for (var x = 0; x < 500 ; x++) {
     var y = 0.8 * x
-    dot(x++, y++ , 'green')
+    dot(x, y , 'green')
   }
 
   // 画一个空心矩形
@@ -148,27 +143,10 @@
   }
 
   // 画一个实心矩形
-  var x= 0
-  for (var i = 0; i < 30 ; i++) {
-    var y = 0
-    var line = dot(x++, y , 'black')
-    line = dot(x-1, y = y + 1 , 'black')
-    line = dot(x-1, y = y + 1 , 'black')
-    line = dot(x-1, y = y + 1 , 'black')
-    line = dot(x-1, y = y + 1 , 'black')
-    line = dot(x-1, y = y + 1 , 'black')
-    line = dot(x-1, y = y + 1 , 'black')
-    line = dot(x-1, y = y + 1 , 'black')
-    line = dot(x-1, y = y + 1 , 'black')
-    line = dot(x-1, y = y + 1 , 'black')
-    line = dot(x-1, y = y + 1 , 'black')
-    line = dot(x-1, y = y + 1 , 'black')
-    line = dot(x-1, y = y + 1 , 'black')
-    line = dot(x-1, y = y + 1 , 'black')
-    line = dot(x-1, y = y + 1 , 'black')
-    line = dot(x-1, y = y + 1 , 'black')
-    line = dot(x-1, y = y + 1 , 'black')
-
+  for (var y = 0; y < 30 ; y++) {
+    for (var x = 300; x <360; x++) {
+      dot (x, y, 'black')
+    }
   }
 
 
@@ -188,13 +166,86 @@
 
 
   // 画一个实心的圆，半径至少为100像素
-  var x = 200
-  var y = 200
+  var x = 50
+  var y = 350
   var r = 100
 
   for (var i = 0; i < 360 ; i++){
-    var circle = dot( x + Math.sin(i * 3.14 /180) * r, y +  Math.cos(i * 3.14 /180) * r, 'black')
+    for (var j = 0; j < 360; j++) {
+    var circle = dot( x + Math.sin(j * 3.14 /180) * r, y +  Math.cos(j * 3.14 /180) * r, 'black')
+    }
+    r = Math.abs(r - 0.3)
   }
 
+
+  // 画一个【大小合适】的sin(x)的图像
+
+
+  for (var x = 0; x < 180 ; x++){
+    var y = 8 * Math.sin(x / 8)
+    var color = 'hsl(' + x + '80%'
+    dot (x++, y + 40, 'red' )
+  }
+
+
+
+  //色彩空间
+  //         2 0
+  //         0 2
+  //         ------
+  //         1  0.27
+  //         0  1     倾斜
+  //         ------
+  //         0.5    0.87
+  //         -0.87  0.5  旋转
+
+
+  for (var y = 0; y < 100 ; y++) {
+    for (var x = 0; x <100; x++) {
+      var color = 'rgb('+ x * 2.55 + ', 255,'+ y * 2.55 +')'
+      // var xx = 0.5 * x - 0.87 * y
+      // var yy = 0.87 * x + 0.5 * y
+
+      var t = Math.PI / 4
+      var x1 = Math.floor(x - y * Math.tan(t))
+      var y1 = Math.floor(y)
+
+      var x2 = Math.floor(x1)
+      var y2 = Math.floor(x1 * Math.sin(t) + y1)
+
+      var x3 = Math.floor(x2 - y2 * Math.tan(t / 2))
+      var y3 = Math.floor(y2)
+      dot (x3 + 150, y3 + 150, color)
+
+    }
+  }
+
+
+
+  var r = 50
+  var x = 0
+  var y = r
+
+  while (x <= y) {
+    for ()
+    dot (x +350, y + 350, 'red')
+    dot (x +350, -y + 350, 'red')
+    dot (-x +350, y + 350, 'red')
+    dot (-x +350, -y +350, 'red')
+    dot (y +350, x + 350, 'red')
+    dot (-y +350, x + 350, 'red')
+    dot (y +350, -x + 350, 'red')
+    dot (-y +350, -x + 350, 'red')
+
+    x++
+
+    var d1 = x * x + y * y
+    var d2 = x * x + (y - 1) * (y - 1)
+
+    if (Math.abs(d1 - r * r) > Math.abs(d2 - r * r)) {
+      y--
+    }
+
+  }
 </script>
 </html>
