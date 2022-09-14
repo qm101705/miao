@@ -18,7 +18,7 @@ var qm101705 = {
   compact: function (array) {
     var result = []
     for (var i = 0; i < array.length; i++) {
-      if (arry[i]) {
+      if (array[i]) {
         result.push(array[i])
       }
     }
