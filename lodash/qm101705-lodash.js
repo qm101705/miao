@@ -26,7 +26,7 @@ var qm101705 = {
     return result
   },
 
-  fill: function (array, value, [start = 0], [end = array.length]) {
+  fill: function (array, value, start = 0, end = array.length) {
     for (var i = start; i < end; i++) {
       array[i] = value
     }
@@ -34,12 +34,12 @@ var qm101705 = {
   },
 
   drop: function (array, n = 1) {
+    var result = []
     for (var i = 0; i < array.length; i++) {
       if (i >= n) {
-        break
-      } else {
-
+        result.push(array[i])
       }
     }
+    return result
   }
 }
