@@ -13,7 +13,7 @@ var qm101705 = {
     }
     result.push(res)
     return result
-  }
+  },
   compact: function (array) {
     var result = []
     for (var i = 0; i < array.length; i++) {
@@ -22,5 +22,5 @@ var qm101705 = {
       }
     }
     return result
-  }
+  },
 }
