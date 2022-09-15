@@ -89,4 +89,38 @@ var qm101705 = {
     return res
   },
 
+  isNaN: function isNaN(value) {
+    if (value) {
+      return false
+    }
+    return true
+  },
+
+  fromPairs: function fromPairs(pairs) {
+    var map = {}
+    for (var i = 0; i < pairs.length; i++) {
+      map[pairs[i][0]] = pairs[i][1]
+    }
+    return map
+  },
+
+  head: function head(ary) {
+    return ary[0]
+  },
+
+  indexOf: function indexOf(ary, value, fromIndex = 0) {
+    for (var i = fromIndex; i < ary.length; i++) {
+      if (ary[i] == value) {
+        return i
+      }
+    }
+  },
+
+  lastIndexOf: function lastIndexOf(ary, value, fromIndex = ary.length - 1) {
+    for (var i = fromIndex; i >= 0; i--) {
+      if (ary[i] == value) {
+        return i
+      }
+    }
+  }
 }
