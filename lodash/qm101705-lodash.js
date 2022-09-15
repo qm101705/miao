@@ -1,18 +1,18 @@
 var qm101705 = {
 
   chunk: function (array, size) {
-    var re = []
+    var result = []
     var arr = []
     for (var i = 0; i < array.length; i++) {
         if (i % size == 0) {
-            re.push(arr)
+          result.push(arr)
             var arr = []
         }
         arr.push(array[i])
     }
-    re.push(arr)
-    re.shift()
-    return re
+    result.push(arr)
+    result.shift()
+    return result
 },
 
   compact: function (array) {
@@ -51,5 +51,42 @@ var qm101705 = {
     return -1
   },
 
+  flatten: function flatten(ary) {
+    return ary.reduce((result, item) => {
+      return result.concat(item)
+    },[])
+  },
+
+  flattenDeep: function flattenDeep(ary) {
+    return ary.reduce((result, item) => {
+      if (Array.isArray(item)) {
+        return result.concat(flattenDeep(item))
+      }
+      return result.concat(item)
+    },[])
+    // var res = []
+    // for (var i = 0; i < ary.length; i++) {
+    //   if (Array.isArray(ary[i])) {
+    //     res.push(...flattenDeep(ary[i]))
+    //   } else {
+    //     res.push(ary[i])
+    //   }
+    // }
+    // return res
+  },
+  flattenDepth: function flattenDepth(ary, depth = 1) {
+    if (depth == 0) {
+      return ary.slice()
+    }
+    var res = []
+    for (var i = 0; i < ary.length; i++) {
+      if (Array.isArray(ary[i])) {
+        res.push(...flattenDepth(ary[i], depth - 1))
+      } else {
+        res.push(ary[i])
+      }
+    }
+    return res
+  },
 
 }
