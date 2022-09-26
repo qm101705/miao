@@ -42,11 +42,32 @@ var qm101705 = {
     return result
   },
 
-  findIndex: function (array, predicate, fromIndex = 0) {
+  findIndex: function findIndex(array, predicate, fromIndex = 0) {
     for (var i = fromIndex; i < array.length; i++) {
-      if (predicate(array[i])) {
-        return i
-      }
+        if (typeof predicate == 'function') {
+            if (predicate(array[i])) {
+                return i
+            }
+        } else if (Array.isArray(predicate)) {
+            if (predicate[1] === array[i][predicate[0]]) {
+                return i
+            }
+        } else if (typeof predicate == 'string') {
+            if (array[i][predicate] === true) {
+                return i
+            }
+        } else if (typeof predicate == 'object') {
+            var judge = 1
+            for (var key in predicate) {
+                if (array[i][key] != predicate[key]) {
+                    judge = 0
+                    break
+                }
+            }
+            if (judge) {
+                return i
+            }
+        }
     }
     return -1
   },
@@ -122,5 +143,37 @@ var qm101705 = {
         return i
       }
     }
-  }
+    return -1
+  },
+  initial: function initial(ary) {
+    ary.pop()
+    return ary
+  },
+  intersection: function intersection(...arys) {
+    var result = []
+    for (var i = 0; i < arys[0].length; i++) {
+        var p = true
+        for (var j = 1; j < arys.length; j++) {
+            if (arys[j].indexOf(arys[0][i]) === -1) {
+                p = false
+                break
+            }
+        }
+        if (p) {
+            result.push(arys[0][i])
+        }
+    }
+    return result
+  },
+  join: function join(ary, separator = ',') {
+    var result = ''
+    for (var i = 0; i < ary.length; i++) {
+      if (i != ary.length - 1) {
+        result = result + ary[i] + separator
+      } else {
+        result += ary[i]
+      }
+    }
+    return result
+  },
 }
