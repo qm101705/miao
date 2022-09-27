@@ -176,4 +176,26 @@ var qm101705 = {
     }
     return result
   },
+  last: function last(ary) {
+    return ary(ary.length - 1)
+  },
+  pull: function pull(ary, ...values) {
+    for (var i = 0; i < ary.length; i++) {
+      if (values.includes(ary[i])) {
+        ary.splice(i, 1)
+        i--
+      }
+    }
+    return ary
+  },
+  reverse: function(ary) {
+    var j = ary.length - 1
+    for (var i = 0; i <= Math.floor(ary.length / 2); i++) {
+      var c = ary[i]
+      ary[i] = ary[j]
+      ary[j] = c
+      j--
+    }
+    return ary
+  },
 }
