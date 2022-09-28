@@ -230,7 +230,7 @@ var qm101705 = {
     }
     return result
   },
-  whithout: function without(ary, ...values) {
+  without: function without(ary, ...values) {
     var result = []
     for (var i = 0; i < ary.length; i++) {
       if (!(values.includes(ary[i]))) {
@@ -276,7 +276,7 @@ var qm101705 = {
     }
     return result
   },
-  unzip: function (...ary) {
+  unzip: function (ary) {
     var result = []
     for (var i = 0; i < ary[0].length; i++) {
       var temp = []
