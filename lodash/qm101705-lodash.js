@@ -177,7 +177,7 @@ var qm101705 = {
     return result
   },
   last: function last(ary) {
-    return ary(ary.length - 1)
+    return ary[ary.length - 1]
   },
   pull: function pull(ary, ...values) {
     for (var i = 0; i < ary.length; i++) {
@@ -198,4 +198,46 @@ var qm101705 = {
     }
     return ary
   },
+  sortedIndex: function sortedIndex(array, value) {
+    var count = 0
+    for (var i = 0; i < array.length; i++) {
+      if (array[i] < value) {
+        count++
+      }
+    }
+    return count
+  },
+  union: function union(...arys) {
+    var map = {}
+    var result = []
+    for (var i = 0; i < arys.length; i++) {
+      for (var j = 0; j < arys[i].length; j++) {
+        var temp = arys[i][j]
+        if (!(temp in map)) {
+          map[temp] = 1
+          result.push(temp)
+        }
+      }
+    }
+    return result
+  },
+  uniq: function uniq(array) {
+    var result = []
+    for (var i = 0; i < array.length; i++) {
+      if (!(result.includes(array[i]))) {
+        result.push(array[i])
+      }
+    }
+    return result
+  },
+  whithout: function without(ary, ...values) {
+    var result = []
+    for (var i = 0; i < ary.length; i++) {
+      if (!(values.includes(ary[i]))) {
+        result.push(ary[i])
+      }
+    }
+    return result
+  }
+
 }
