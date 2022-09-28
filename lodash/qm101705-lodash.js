@@ -238,6 +238,54 @@ var qm101705 = {
       }
     }
     return result
-  }
+  },
+  unionBy: function unionBy(...arys) {
+    var iteratee = arys.pop()
+    var result = []
+    var temp = []
+    for (var i = 0; i < arys.length; i++) {
+      for (var j = 0; j < arys[i].length; j++) {
+        if (typeof iteratee == 'function') {
+          var num = iteratee(arys[i][j])
+        }
+        if (typeof iteratee == 'string') {
+          var num = arys[i][j][iteratee]
+        }
+        if (temp.indexOf(num) == -1) {
+          temp.push(num)
+          result.push(arys[i][j])
+        }
+      }
+    }
+    return result
+  },
+  uniqBy: function (ary, iteratee) {
+    var result = []
+    var temp = []
+    for (var i = 0; i < ary.length; i++) {
+      if (typeof iteratee == 'function') {
+        var num = iteratee(ary[i])
+      }
+      if (typeof iteratee == 'string') {
+        var num = ary[i][iteratee]
+      }
+      if (temp.indexOf(num) == -1) {
+        temp.push(num)
+        result.push(ary[i])
+      }
+    }
+    return result
+  },
+  unzip: function (...ary) {
+    var result = []
+    for (var i = 0; i < ary[0].length; i++) {
+      var temp = []
+      for (var j = 0; j < ary.length; j++) {
+        temp.push(ary[j][i])
+      }
+      result.push(temp)
+    }
+    return result
+  },
 
 }
