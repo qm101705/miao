@@ -2,16 +2,10 @@ var qm101705 = {
 
   chunk: function (array, size) {
     var result = []
-    var arr = []
-    for (var i = 0; i < array.length; i++) {
-        if (i % size == 0) {
-          result.push(arr)
-            var arr = []
-        }
-        arr.push(array[i])
+    for (var i = 0; i < array.length; i += size) {
+        var part = array.slice(i, i + size)
+        result.push(part)
     }
-    result.push(arr)
-    result.shift()
     return result
 },
 
@@ -53,7 +47,7 @@ var qm101705 = {
                 return i
             }
         } else if (typeof predicate == 'string') {
-            if (array[i][predicate] === true) {
+            if (array[i][predicate]) {
                 return i
             }
         } else if (typeof predicate == 'object') {
@@ -229,6 +223,7 @@ var qm101705 = {
       }
     }
     return result
+    return [...new Set(array)]
   },
   without: function without(ary, ...values) {
     var result = []
@@ -276,7 +271,7 @@ var qm101705 = {
     }
     return result
   },
-  unzip: function (ary) {
+  unzip: function unzip(ary) {
     var result = []
     for (var i = 0; i < ary[0].length; i++) {
       var temp = []
@@ -287,5 +282,49 @@ var qm101705 = {
     }
     return result
   },
-
+  xor: function (...arys) {
+    var result = []
+    var map = {}
+    for (var i = 0; i < arys.length; i++) {
+      for (var j = 0; j < arys[i].length; j++) {
+        var char = arys[i][j]
+        if (!(char in map)) {
+          map[char] = 1
+        } else {
+          map[char]--
+        }
+      }
+    }
+    for (var str in map) {
+      var r = map[str]
+      if (r == 1) {
+        result.push(Number(str))
+      }
+    }
+    return result
+  },
+  zip: function (...arys) {
+    var result = this.unzip(arys)
+    return result
+  },
+  countBy: function countBy(...collection) {
+    var iteratee = collection.pop()
+    var map = {}
+    for (var i = 0; i < collection.length; i++) {
+      for (var j = 0; j < collection[i].length; j++) {
+        if (typeof iteratee == 'function') {
+          var temp = iteratee(collection[i][j])
+        }
+        if (typeof iteratee == 'string') {
+          var temp = collection[i][j][iteratee]
+        }
+        if (!(temp in map)) {
+          map[temp] = 1
+        } else {
+          map[temp]++
+        }
+      }
+    }
+    return map
+  }
 }
